@@ -8,7 +8,7 @@ export default function AboutHero() {
     <section className="w-full bg-white ">
       {/* Top section: image + text */}
       <div className="relative w-full h-[68vw] bg-white">
-        <div className="absolute bg-white left-[20%] top-[15%] z-5 w-[40vw] h-[55vw] overflow-hidden">
+        <div className="absolute bg-white left-[24%] top-[15%] z-5 w-[40vw] h-[55vw] overflow-hidden">
           <Image
             src="/images/aboutTop.avif"
             alt="Built for Men Who Move Forward"
@@ -17,15 +17,15 @@ export default function AboutHero() {
           />
         </div>
         <div className="flex flex-col md:flex-row justify-between absolute top-[20%] z-10 w-full px-[4vw] gap-12 bg-black mix-blend-difference">
-          <h2 className="w-[40%] h-[20vw] items-start text-4xl sm:text-5xl text-white leading-tight ">
+          <h2 className="w-[40%] h-[30vw] items-start text-4xl sm:text-5xl text-white leading-tight ">
             Built for Men Who Move Forward
           </h2>
-          <div className="flex flex-col justify-end h-[20vw] w-[50%] font-bold space-y-4 ">
-            <p className=" text-white text-md md:text-[1.3vw]  sm:text-base leading-tight">
+          <div className="flex flex-col justify-end h-[30vw] w-[50%] font-medium space-y-4 ">
+            <p className=" text-white text-md md:text-[1.6vw]  sm:text-base leading-tight">
               Implycode was founded with a simple belief — that modern menswear
               should be effortless, versatile, and quietly powerful.
             </p>
-            <p className="text-white text-md md:text-[1.3vw]  sm:text-base leading-tight">
+            <p className="text-white text-md md:text-[1.6vw]  sm:text-base leading-tight">
               We design essential pieces for the everyday man: clean
               silhouettes, quality materials, and perfect fits. No trends. Just
               timeless utility.

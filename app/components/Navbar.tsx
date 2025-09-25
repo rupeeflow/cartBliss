@@ -24,42 +24,42 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-12 md:space-x-[3vw]">
             <Link
               href="/"
-              className="text-2xl md:text-[2vw] font-medium text-white hover:text-gray-600"
+              className="text-2xl md:text-[1.6vw] font-medium text-white hover:text-gray-400"
             >
               Product
             </Link>
             <Link
               href="/news"
-              className="text-2xl md:text-[2vw] font-medium text-white hover:text-gray-600"
+              className="text-2xl md:text-[1.6vw] font-medium text-white hover:text-gray-400"
             >
               News
             </Link>
 
             <div className="flex group  relative">
               {" "}
-              <button className="text-2xl md:text-[2vw] font-medium text-white hover:text-gray-600 flex items-center">
+              <button className="text-2xl md:text-[1.6vw] font-medium text-white hover:text-gray-400 flex items-center">
                 About{" "}
                 <span className="ml-1 ">
                   <ChevronDown />
                 </span>
               </button>
               {/* Dropdown (optional, hidden by default) */}
-              <div className="absolute top-[80%] w-40 bg-black shadow-md mt-2 rounded-lg p-2 group-hover:block  hidden">
+              <div className="absolute top-[80%] w-40 bg-black shadow-md mt-2 rounded-lg p-2 group-hover:block mix-blend-normal hidden">
                 <Link
                   href="/about"
-                  className="block text-gray-600 px-4 py-2 text-[1.5vw] hover:bg-gray-100"
+                  className="block text-gray-500 px-4 py-2 text-[1.5vw] hover:text-white"
                 >
                   About
                 </Link>
                 <Link
                   href="/contact"
-                  className="block text-gray-600 px-4 py-2 text-[1.5vw] hover:bg-gray-100"
+                  className="block text-gray-500 px-4 py-2 text-[1.5vw] hover:text-white"
                 >
                   Contact
                 </Link>
                 <Link
                   href="/support"
-                  className="block text-gray-600 px-4 py-2 text-[1.5vw] hover:bg-gray-100"
+                  className="block text-gray-500 px-4 py-2 text-[1.5vw] hover:text-white"
                 >
                   Support
                 </Link>
