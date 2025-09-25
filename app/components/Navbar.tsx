@@ -9,35 +9,35 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full border-b bg-white">
-      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav className=" w-full py-4 md:py-[1vw] border-b bg-white">
+      <div className=" max-w-full mx-auto px-4 sm:px-6 lg:px-[2vw]">
+        <div className="flex justify-between items-center ">
           {/* Left - Logo */}
           <Link
             href="/"
-            className="flex-shrink-0 text-gray-600 text-3xl font-regular"
+            className="flex-shrink-0 text-gray-600 text-3xl md:text-[2vw] font-regular"
           >
             CartBliss
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-12">
+          <div className="hidden md:flex items-center space-x-12 md:space-x-[3vw]">
             <Link
               href="/"
-              className="text-2xl font-bold text-black hover:text-gray-600"
+              className="text-[2vw] font-bold text-black hover:text-gray-600"
             >
               Product
             </Link>
             <Link
               href="/news"
-              className="text-2xl font-bold text-black hover:text-gray-600"
+              className="text-[2vw] font-bold text-black hover:text-gray-600"
             >
               News
             </Link>
 
             <div className="flex group  relative">
               {" "}
-              <button className="text-2xl font-bold text-black hover:text-gray-600 flex items-center">
+              <button className="text-[2vw] font-bold text-black hover:text-gray-600 flex items-center">
                 About{" "}
                 <span className="ml-1 ">
                   <ChevronDown />
@@ -47,15 +47,21 @@ export default function Navbar() {
               <div className="absolute top-[80%] w-40 bg-white shadow-md mt-2 rounded-lg p-2 group-hover:block  hidden">
                 <Link
                   href="#"
-                  className="block text-gray-600 px-4 py-2 text-lg hover:bg-gray-100"
+                  className="block text-gray-600 px-4 py-2 text-[1.5vw] hover:bg-gray-100"
                 >
-                  Our Story
+                  About
                 </Link>
                 <Link
                   href="#"
-                  className="block text-gray-600 px-4 py-2 text-lg hover:bg-gray-100"
+                  className="block text-gray-600 px-4 py-2 text-[1.5vw] hover:bg-gray-100"
                 >
-                  Team
+                  Contact
+                </Link>
+                <Link
+                  href="#"
+                  className="block text-gray-600 px-4 py-2 text-[1.5vw] hover:bg-gray-100"
+                >
+                  Support
                 </Link>
               </div>
             </div>
@@ -124,7 +130,7 @@ export default function Navbar() {
             About
           </a>
           <a href="#" className="flex items-center space-x-1">
-            <ShoppingCart className="w-5 h-5" />
+            <ShoppingCart size={30} />
             <span className="text-sm font-medium">Cart (0)</span>
           </a>
         </div>
