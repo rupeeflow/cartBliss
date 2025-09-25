@@ -1,37 +1,62 @@
-// app/about/page.tsx  (or components/AboutSection.tsx)
+// app/about/page.tsx
 "use client";
 
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
 
 export default function AboutHero() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // track scroll inside the section
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"], // start when it enters viewport, end when it leaves
+  });
+
+  // Parallax transforms
+  const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
+  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
+
+  const scaleImage = useTransform(scrollYProgress, [0, 1], [0.5, 2]);
+
   return (
-    <section className="w-full bg-white ">
+    <section ref={containerRef} className="w-full bg-white overflow-hidden">
       {/* Top section: image + text */}
       <div className="relative w-full h-[68vw] bg-white">
-        <div className="absolute bg-white left-[24%] top-[15%] z-5 w-[40vw] h-[55vw] overflow-hidden">
+        {/* Image with parallax */}
+        <motion.div
+          style={{ y: yImage }}
+          className="absolute bg-white left-[24%]  z-5 w-[40vw] h-[55vw] overflow-hidden"
+        >
           <Image
             src="/images/aboutTop.avif"
             alt="Built for Men Who Move Forward"
             fill
-            className="object-cover w-full h-full "
+            className="object-cover w-full h-full"
           />
-        </div>
-        <div className="flex flex-col md:flex-row justify-between absolute top-[20%] z-10 w-full px-[4vw] gap-12 bg-black mix-blend-difference">
-          <h2 className="w-[40%] h-[30vw] items-start text-4xl sm:text-5xl text-white leading-tight ">
+        </motion.div>
+
+        {/* Text with parallax */}
+        <motion.div
+          style={{ y: yText }}
+          className="flex flex-col md:flex-row justify-between absolute top-[30%] z-10 w-full px-[4vw] gap-12 bg-black mix-blend-difference"
+        >
+          <h2 className="w-full md:w-[40%] h-[30vw] items-start text-4xl md:text-[4vw] text-white leading-tight">
             Built for Men Who Move Forward
           </h2>
-          <div className="flex flex-col justify-end h-[30vw] w-[50%] font-medium space-y-4 ">
-            <p className=" text-white text-md md:text-[1.6vw]  sm:text-base leading-tight">
-              Implycode was founded with a simple belief — that modern menswear
+          <div className="flex flex-col justify-end h-[30vw] w-full md:w-[50%] font-medium space-y-4">
+            <p className="text-white text-md md:text-[1.6vw] sm:text-base leading-tight">
+              CartBliss was founded with a simple belief — that modern menswear
               should be effortless, versatile, and quietly powerful.
             </p>
-            <p className="text-white text-md md:text-[1.6vw]  sm:text-base leading-tight">
+            <p className="text-white text-md md:text-[1.6vw] sm:text-base leading-tight">
               We design essential pieces for the everyday man: clean
               silhouettes, quality materials, and perfect fits. No trends. Just
               timeless utility.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Middle section: Mission statement */}
@@ -44,14 +69,17 @@ export default function AboutHero() {
 
       {/* Bottom section: small image */}
       <div className="flex justify-center h-[30vw] w-full mt-10">
-        <div className="relative w-64 h-64  overflow-hidden">
+        <motion.div
+          style={{ scale: scaleImage }}
+          className="relative w-64 h-64 overflow-hidden"
+        >
           <Image
             src="/images/about2.avif"
             alt="Men style"
             fill
             className="object-cover"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -24,14 +24,23 @@ export default function AboutSocial() {
           {socialImages.map((item, idx) => (
             <div
               key={idx}
-              className="relative w-full cursor-pointer  h-42 md:h-[22vw] rounded-sm overflow-hidden"
+              className="relative group w-full cursor-pointer  h-42 md:h-[22vw] rounded-sm overflow-hidden"
             >
               <Image
                 src={item.src}
                 alt={item.alt}
                 fill
-                className="object-cover hover:scale-110 transition-transform duration-500"
+                className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
+              <div className="absolute flex items-center justify-center bg-black opacity-0 object-cover w-full h-full group-hover:opacity-[0.5] duration-300 ease-in-out">
+                <Image
+                  src="/images/insta.svg"
+                  alt="Instagram logo"
+                  height={40}
+                  width={40}
+                  className="opacity-0 group-hover:opacity-100"
+                />{" "}
+              </div>
             </div>
           ))}
         </div>
