@@ -49,13 +49,19 @@ export default function Navbar() {
                   href="#"
                   className="block text-gray-600 px-4 py-2 text-lg hover:bg-gray-100"
                 >
-                  Our Story
+                  About
                 </Link>
                 <Link
                   href="#"
                   className="block text-gray-600 px-4 py-2 text-lg hover:bg-gray-100"
                 >
-                  Team
+                  Contact
+                </Link>
+                <Link
+                  href="#"
+                  className="block text-gray-600 px-4 py-2 text-lg hover:bg-gray-100"
+                >
+                  Support
                 </Link>
               </div>
             </div>
