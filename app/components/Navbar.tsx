@@ -2,7 +2,8 @@
 "use client";
 
 import { useState } from "react";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,44 +13,52 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Left - Logo */}
-          <div className="flex-shrink-0 text-lg font-semibold">Implycode</div>
+          <div className="flex-shrink-0 text-gray-600 text-3xl font-semibold">
+            CartBliss
+          </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#"
-              className="text-sm font-medium text-black hover:text-gray-600"
+          <div className="hidden md:flex items-center space-x-12">
+            <Link
+              href="/"
+              className="text-2xl font-bold text-black hover:text-gray-600"
             >
               Product
-            </a>
-            <a
-              href="#"
-              className="text-sm font-medium text-black hover:text-gray-600"
+            </Link>
+            <Link
+              href="/news"
+              className="text-2xl font-bold text-black hover:text-gray-600"
             >
               News
-            </a>
-            <div className="relative group">
-              <button className="text-sm font-medium text-black hover:text-gray-600 flex items-center">
-                About <span className="ml-1 text-gray-400">+</span>
+            </Link>
+
+            <div className="flex group  relative">
+              {" "}
+              <button className="text-2xl font-bold text-black hover:text-gray-600 flex items-center">
+                About{" "}
+                <span className="ml-1 ">
+                  <ChevronDown />
+                </span>
               </button>
               {/* Dropdown (optional, hidden by default) */}
-              <div className="absolute hidden group-hover:block bg-white shadow-md mt-2 rounded-lg p-2">
-                <a
+              <div className="absolute top-[80%] w-40 bg-white shadow-md mt-2 rounded-lg p-2 group-hover:block  hidden">
+                <Link
                   href="#"
-                  className="block px-4 py-2 text-sm hover:bg-gray-100"
+                  className="block text-gray-600 px-4 py-2 text-lg hover:bg-gray-100"
                 >
                   Our Story
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
-                  className="block px-4 py-2 text-sm hover:bg-gray-100"
+                  className="block text-gray-600 px-4 py-2 text-lg hover:bg-gray-100"
                 >
                   Team
-                </a>
+                </Link>
               </div>
             </div>
+
             <a href="#" className="relative">
-              <ShoppingCart className="w-5 h-5" />
+              <ShoppingCart color="black" size={30} />
               <span className="absolute -top-2 -right-2 text-xs font-semibold bg-black text-white rounded-full px-1">
                 0
               </span>
