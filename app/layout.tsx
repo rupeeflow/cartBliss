@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navigation from '@/components/Navigation';
 import Footer from "./components/Footer";
 import SmoothScrollProvider from "./utils/SmoothScrollProvider";
 
@@ -31,7 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <SmoothScrollProvider>
-          <Navbar />
+          <Navigation /> 
           <main>{children}</main>
           <Footer />
         </SmoothScrollProvider>
