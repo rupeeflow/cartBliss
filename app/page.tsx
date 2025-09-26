@@ -1,9 +1,9 @@
-import HomeHero from "./components/HomeHero";
-import EssentialsSection from "./components/EssentialsSection";
-import { cardData, productData } from "./lib/typesInterfaces";
-import NewsSection from "./components/NewsSection";
-import FavoouriteSection from "./components/FavouriteSection";
-import StyleSection from "./components/StyleSection";
+import HomeHero from "./_components/HomeHero";
+import EssentialsSection from "./_components/EssentialsSection";
+import { cardData, productData } from "./_lib/typesInterfaces";
+import NewsSection from "./_components/NewsSection";
+import FavouriteSection from "./_components/FavouriteSection";
+import StyleSection from "./_components/StyleSection";
 
 const essentialItems: cardData[] = [
   {
@@ -88,7 +88,7 @@ export default function Home() {
             elevate your everyday wardrobe."
         cardData={essentialItems}
       />
-      <FavoouriteSection
+      <FavouriteSection
         title="Proven Favourites"
         description="Trusted by thousands of customers. These pieces define versatility — perfect for workdays or weekends."
         cardData={products}

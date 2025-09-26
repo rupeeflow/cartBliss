@@ -3,13 +3,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { CardSectionProps } from "@/app/lib/typesInterfaces";
+import { ProductSectionProps } from "@/app/_lib/typesInterfaces";
 
-export default function NewsSection({
+export default function FavouriteSection({
   title,
   description,
   cardData = [],
-}: CardSectionProps) {
+}: ProductSectionProps) {
   return (
     <section className="relative z-6 w-full bg-white py-[6vw] pb-50">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-[3vw]">
@@ -28,17 +28,29 @@ export default function NewsSection({
           {cardData.map((item, idx) => (
             <Link href={item.link} key={idx} className="group cursor-pointer">
               <div className="relative w-full h-120 md:h-[38vw] overflow-hidden rounded-md bg-gray-200">
+                {/* Default Image */}
                 <Image
                   src={item.imageUrl}
                   alt={item.title}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="object-cover transition-opacity duration-500 group-hover:opacity-0"
                 />
+
+                {/* Hover Image (only if provided) */}
+                {item.hoverImageUrl && (
+                  <Image
+                    src={item.hoverImageUrl}
+                    alt={`${item.title} hover`}
+                    fill
+                    className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                  />
+                )}
               </div>
-              <h3 className="mt-4 text-lg md:text-[1.6vw] font-semibold text-black">
+
+              <h3 className="mt-4 text-lg md:text-[1.4vw] text-black">
                 {item.title}
               </h3>
-              <p className="text-md md:text-[1.2vw] mt-2 md:mt-[0.6vw]  text-gray-600">
+              <p className="text-md md:text-[1.2vw] text-gray-600">
                 {item.description}
               </p>
             </Link>

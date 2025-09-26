@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { CardSectionProps } from "../lib/typesInterfaces";
+import { CardSectionProps } from "../_lib/typesInterfaces";
 
 export default function EssentialsSection({
   title,

@@ -1,5 +1,5 @@
-import FAQ from "@/app/components/FAQ";
-import SupportInfo from "@/app/components/SupportInfo";
+import FAQ from "@/app/_components/FAQ";
+import SupportInfo from "@/app/_components/SupportInfo";
 
 const SupportPage = () => {
   return (

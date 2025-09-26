@@ -1,7 +1,7 @@
-import AboutBanner from "@/app/components/AboutBanner";
-import AboutHero from "@/app/components/AboutHero";
-import AboutSecond from "@/app/components/AboutSecond";
-import AboutSocial from "@/app/components/AboutSocials";
+import AboutBanner from "@/app/_components/AboutBanner";
+import AboutHero from "@/app/_components/AboutHero";
+import AboutSecond from "@/app/_components/AboutSecond";
+import AboutSocial from "@/app/_components/AboutSocials";
 import React from "react";
 
 const AboutPage = () => {

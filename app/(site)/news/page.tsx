@@ -1,6 +1,6 @@
-import NewsSection from "@/app/components/NewsSection";
+import NewsSection from "@/app/_components/NewsSection";
 import React from "react";
-import { cardData } from "@/app/lib/typesInterfaces";
+import { cardData } from "@/app/_lib/typesInterfaces";
 
 const newsItems: cardData[] = [
   {
