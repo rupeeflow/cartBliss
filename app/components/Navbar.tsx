@@ -9,19 +9,19 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className=" w-full py-4 md:py-[1vw]  fixed top-0 z-99 mix-blend-difference bg-black">
+    <nav className=" w-full py-4 md:py-[1vw]  mix-blend-difference bg-black fixed top-0 z-99 ">
       <div className=" max-w-full mx-auto px-4 sm:px-6 lg:px-[2vw]">
         <div className="flex justify-between items-center ">
           {/* Left - Logo */}
           <Link
             href="/"
-            className="flex-shrink-0 text-white text-3xl md:text-[2vw] font-regular"
+            className="flex-shrink-0 text-white text-3xl md:text-[4vw] lg:text-[2vw] font-regular"
           >
             CartBliss
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-12 md:space-x-[3vw]">
+          <div className="hidden lg:flex items-center space-x-12 md:space-x-[3vw]">
             <Link
               href="/"
               className="text-2xl md:text-[1.6vw] font-medium text-white hover:text-gray-400"
@@ -75,13 +75,13 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="focus:outline-none"
             >
               <svg
-                className="h-6 w-6 text-black"
+                className="h-6 w-6 text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -110,7 +110,10 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2">
+        <div
+          style={{ mixBlendMode: "normal" }}
+          className="lg:hidden w-[50%] h-full bg-white px-4 pb-4 space-y-2"
+        >
           <a
             href="#"
             className="block text-sm font-medium text-black hover:text-gray-600"

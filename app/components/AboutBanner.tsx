@@ -18,7 +18,7 @@ const AboutBanner = () => {
   return (
     <section
       ref={containerRef}
-      className="w-full relative bg-white py-30 md:py-[10vw]"
+      className="w-full relative overflow-hidden bg-white py-30 md:py-[10vw]"
     >
       <motion.div
         style={{ scale: scaleimage }}
