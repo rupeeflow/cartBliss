@@ -1,7 +1,9 @@
 import HomeHero from "./components/HomeHero";
 import EssentialsSection from "./components/EssentialsSection";
-import { cardData } from "./lib/typesInterfaces";
+import { cardData, productData } from "./lib/typesInterfaces";
 import NewsSection from "./components/NewsSection";
+import FavoouriteSection from "./components/FavouriteSection";
+import StyleSection from "./components/StyleSection";
 
 const essentialItems: cardData[] = [
   {
@@ -51,6 +53,30 @@ const newsItems: cardData[] = [
   },
 ];
 
+const products: productData[] = [
+  {
+    title: "Relaxed Linen Jacket",
+    description: "JACKET",
+    imageUrl: "/images/product1.avif",
+    hoverImageUrl: "/images/product1-hover.avif",
+    link: "#",
+  },
+  {
+    title: "Basic Regular Fit Tee",
+    description: "TEE",
+    imageUrl: "/images/product2.avif",
+    hoverImageUrl: "/images/product2-hover.avif",
+    link: "#",
+  },
+  {
+    title: "Baggy Denime Trousers",
+    description: "PANTS",
+    imageUrl: "/images/product3.avif",
+    hoverImageUrl: "/images/product3-hover.avif",
+    link: "#",
+  },
+];
+
 export default function Home() {
   return (
     <div>
@@ -62,6 +88,12 @@ export default function Home() {
             elevate your everyday wardrobe."
         cardData={essentialItems}
       />
+      <FavoouriteSection
+        title="Proven Favourites"
+        description="Trusted by thousands of customers. These pieces define versatility — perfect for workdays or weekends."
+        cardData={products}
+      />
+      <StyleSection />
       <NewsSection
         title="What's new at CartBliss"
         description="From new product drops to style tips — read our latest features, editorials, and brand announcements."
