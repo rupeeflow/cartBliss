@@ -112,28 +112,40 @@ export default function Navbar() {
       {isOpen && (
         <div
           style={{ mixBlendMode: "normal" }}
-          className="lg:hidden w-[50%] h-full bg-white px-4 pb-4 space-y-2"
+          className="lg:hidden w-[50vw] h-[100dvh] bg-white px-4 pb-4 space-y-2"
         >
           <a
-            href="#"
-            className="block text-sm font-medium text-black hover:text-gray-600"
+            href="/product"
+            className="block text-[4rem] border-b font-medium text-black hover:text-gray-600"
           >
             Product
           </a>
           <a
-            href="#"
-            className="block text-sm font-medium text-black hover:text-gray-600"
+            href="/news"
+            className="block text-[4rem] border-b font-medium text-black hover:text-gray-600"
           >
             News
           </a>
           <a
-            href="#"
-            className="block text-sm font-medium text-black hover:text-gray-600"
+            href="/about"
+            className="block text-[4rem] border-b font-medium text-black hover:text-gray-600"
           >
             About
           </a>
-          <a href="#" className="flex items-center space-x-1">
-            <ShoppingCart size={30} />
+          <a
+            href="/contact"
+            className="block text-[4rem] border-b font-medium text-black hover:text-gray-600"
+          >
+            Contact
+          </a>
+          <a
+            href="/support"
+            className="block text-[4rem] border-b font-medium text-black hover:text-gray-600"
+          >
+            Support
+          </a>
+          <a href="#" className="flex mt-20 items-center space-x-1">
+            <ShoppingCart color="black" size={90} />
             <span className="text-sm font-medium">Cart (0)</span>
           </a>
         </div>
