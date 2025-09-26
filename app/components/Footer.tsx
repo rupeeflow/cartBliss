@@ -3,14 +3,14 @@ import Link from "next/link";
 
 const navigationLinks = [
   { name: "Collection", href: "#" },
-  { name: "Product", href: "#" },
-  { name: "About", href: "#" },
+  { name: "Product", href: "/product" },
+  { name: "About", href: "/about" },
 ];
 
 const infoLinks = [
   { name: "News", href: "/news" },
-  { name: "Contact", href: "#" },
-  { name: "Support", href: "#" },
+  { name: "Contact", href: "/contact" },
+  { name: "Support", href: "/support" },
 ];
 
 const socialLinks = [

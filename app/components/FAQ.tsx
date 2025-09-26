@@ -44,7 +44,7 @@ export default function FAQ() {
       <div className="flex flex-col justify-between md:flex-row w-full mx-auto px-4 sm:px-6 lg:px-[5vw]  gap-10 md:gap-[20vw] items-start">
         {/* Left - Heading */}
         <div>
-          <h2 className="w-full md:w-[10vw] text-4xl sm:text-5xl text-black leading-tight">
+          <h2 className="w-full md:w-[10vw] text-4xl sm:text-5xl md:text-[4vw] text-black leading-tight">
             Frequently Asked Questions
           </h2>
         </div>

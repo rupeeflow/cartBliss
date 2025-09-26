@@ -46,11 +46,11 @@ const newsItems = [
 export default function NewsSection() {
   return (
     <section className="w-full bg-white py-[6vw] pb-50">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-[2vw]">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-[3vw]">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-[6vw]">
           <h2 className="text-[5vw]  text-black">Our News</h2>
-          <p className="mt-4 md:mt-0 w-full md:w-[24%] text-justify text-gray-600 text-lg md:text-[1.3vw]">
+          <p className="mt-4 md:mt-0 w-full md:w-[25%] text-justify text-gray-700 text-lg md:text-[1.4vw]">
             From new product drops to style tips — read our latest features,
             editorials, and brand announcements.
           </p>
