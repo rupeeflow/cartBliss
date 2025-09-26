@@ -21,7 +21,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full flex flex-col border-gray-300 border-t bg-white pt-12">
+    <footer className="w-full relative z-80 flex flex-col border-gray-300 border-t bg-white pt-12">
       <div className="flex flex-col md:flex-row justify-between w-full px-4 sm:px-6 lg:px-14 py-10">
         {/* Left - Company */}
         <div>
