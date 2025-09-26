@@ -24,7 +24,6 @@ export default function AboutHero() {
     <section ref={containerRef} className="w-full bg-white overflow-hidden">
       {/* Top section: image + text */}
       <div className="relative w-full h-[68vw] bg-white">
-        {/* Image with parallax */}
         <motion.div
           style={{ y: yImage }}
           className="absolute bg-white left-[24%]  z-5 w-[40vw] h-[55vw] overflow-hidden"
@@ -37,12 +36,11 @@ export default function AboutHero() {
           />
         </motion.div>
 
-        {/* Text with parallax */}
         <motion.div
           style={{ y: yText }}
           className="flex flex-col md:flex-row justify-between absolute top-[30%] z-10 w-full px-[4vw] gap-12 bg-black mix-blend-difference"
         >
-          <h2 className="w-full md:w-[40%] h-[30vw] items-start text-4xl md:text-[4vw] text-white leading-tight">
+          <h2 className="w-full md:w-[40%] h-[30vw] items-start text-4xl md:text-[4.2vw] text-white leading-tight">
             Built for Men Who Move Forward
           </h2>
           <div className="flex flex-col justify-end h-[30vw] w-full md:w-[50%] font-medium space-y-4">

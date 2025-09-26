@@ -1,3 +1,4 @@
+import AboutBanner from "@/app/components/AboutBanner";
 import AboutHero from "@/app/components/AboutHero";
 import AboutSecond from "@/app/components/AboutSecond";
 import AboutSocial from "@/app/components/AboutSocials";
@@ -8,6 +9,7 @@ const AboutPage = () => {
     <div>
       <AboutHero />
       <AboutSecond />
+      <AboutBanner />
       <AboutSocial />
     </div>
   );

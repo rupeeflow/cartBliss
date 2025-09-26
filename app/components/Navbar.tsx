@@ -44,7 +44,7 @@ export default function Navbar() {
                 </span>
               </button>
               {/* Dropdown (optional, hidden by default) */}
-              <div className="absolute top-[80%] w-40 bg-black shadow-md mt-2 rounded-lg p-2 group-hover:block mix-blend-normal hidden">
+              <div className="absolute border top-[80%] right-0 w-40 bg-black shadow-md mt-2 rounded-lg p-2 group-hover:block mix-blend-normal hidden">
                 <Link
                   href="/about"
                   className="block text-gray-500 px-4 py-2 text-[1.5vw] hover:text-white"

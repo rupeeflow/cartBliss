@@ -3,11 +3,13 @@
 
 export default function ContactForm() {
   return (
-    <section className="w-full bg-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+    <section className="w-full bg-white py-16 pt-[12vw]">
+      <div className="flex flex-col md:flex-row w-full mx-auto px-4 sm:px-6 lg:px-8  gap-10 items-start">
         {/* Left Side - Heading */}
         <div>
-          <h2 className="text-4xl sm:text-5xl font-medium">Get in touch</h2>
+          <h2 className="text-4xl w-full md:w-[40vw] text-black sm:text-5xl md:text-[5vw]">
+            Get in touch
+          </h2>
         </div>
 
         {/* Right Side - Form */}
@@ -17,7 +19,7 @@ export default function ContactForm() {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-md md:text-[1.4vw] text-black"
               >
                 Name*
               </label>
@@ -26,13 +28,13 @@ export default function ContactForm() {
                 id="name"
                 placeholder="Enter your name"
                 required
-                className="mt-1 block w-full border border-gray-300 px-4 py-2 text-sm focus:ring-2 focus:ring-black focus:outline-none"
+                className="mt-1 text-gray-800 block w-full border border-gray-500 px-4 py-3 text-sm focus:ring-2 focus:ring-black focus:outline-none"
               />
             </div>
             <div>
               <label
                 htmlFor="phone"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-md md:text-[1.4vw] text-black"
               >
                 Phone Number*
               </label>
@@ -41,7 +43,7 @@ export default function ContactForm() {
                 id="phone"
                 placeholder="Enter your phone number"
                 required
-                className="mt-1 block w-full border border-gray-300 px-4 py-2 text-sm focus:ring-2 focus:ring-black focus:outline-none"
+                className="mt-1 text-gray-800 block w-full border border-gray-500 px-4 py-3 text-sm focus:ring-2 focus:ring-black focus:outline-none"
               />
             </div>
           </div>
@@ -50,7 +52,7 @@ export default function ContactForm() {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-md md:text-[1.4vw] text-black"
             >
               Email
             </label>
@@ -58,7 +60,7 @@ export default function ContactForm() {
               type="email"
               id="email"
               placeholder="youremail@gmail.com"
-              className="mt-1 block w-full border border-gray-300 px-4 py-2 text-sm focus:ring-2 focus:ring-black focus:outline-none"
+              className="mt-1 text-gray-800 block w-full border border-gray-500 px-4 py-3 text-sm focus:ring-2 focus:ring-black focus:outline-none"
             />
           </div>
 
@@ -66,7 +68,7 @@ export default function ContactForm() {
           <div>
             <label
               htmlFor="message"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-md md:text-[1.4vw] text-black"
             >
               Message
             </label>
@@ -74,14 +76,14 @@ export default function ContactForm() {
               id="message"
               rows={4}
               placeholder="Can we help you?"
-              className="mt-1 block w-full border border-gray-300 px-4 py-2 text-sm focus:ring-2 focus:ring-black focus:outline-none"
+              className="mt-1 block w-full border border-gray-500 px-4 py-2 text-sm focus:ring-2 focus:ring-black focus:outline-none"
             ></textarea>
           </div>
 
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-black text-white py-3 font-medium hover:bg-gray-900 transition"
+            className="w-full cursor-pointer bg-black text-white py-3 font-medium hover:bg-gray-900 transition"
           >
             Send Message
           </button>

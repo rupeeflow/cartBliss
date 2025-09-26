@@ -3,19 +3,23 @@
 
 export default function ContactInfo() {
   return (
-    <section className="w-full bg-white py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+    <section className="w-full bg-white py-16 md:py-[10vw] md:pb-[10vw]">
+      <div className="flex flex-col md:flex-row w-full mx-auto px-4 sm:px-6 lg:px-8  gap-10 items-start">
         {/* Left Side - Heading */}
         <div>
-          <h2 className="text-4xl sm:text-5xl font-medium">Contact</h2>
+          <h2 className="text-4xl w-full md:w-[40vw] text-black sm:text-5xl md:text-[5vw]">
+            Contact
+          </h2>
         </div>
 
         {/* Right Side - Info */}
-        <div className="space-y-8 text-gray-800">
+        <div className="space-y-8 md:space-y-[4vw] text-gray-800">
           {/* Address */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-500">Address</h3>
-            <p className="mt-1 text-sm">
+            <h3 className="text-md md:text-[1.2vw] font-semibold text-gray-500">
+              Address
+            </h3>
+            <p className="mt-1 text-sm md:text-[1.4vw] text-black">
               1389 Market Street, Suite 300. <br />
               San Francisco, CA 94103, USA
             </p>
@@ -23,8 +27,10 @@ export default function ContactInfo() {
 
           {/* Hours */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-500">Hours</h3>
-            <p className="mt-1 text-sm">
+            <h3 className="text-md md:text-[1.2vw] font-semibold text-gray-500">
+              Hours
+            </h3>
+            <p className="mt-1 text-sm md:text-[1.4vw] text-black">
               Monday - Friday <br />
               8am - 5pm
             </p>
@@ -32,10 +38,10 @@ export default function ContactInfo() {
 
           {/* Customer Service */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-500">
+            <h3 className="text-md md:text-[1.2vw] font-semibold text-gray-500">
               Customer Service
             </h3>
-            <p className="mt-1 text-sm">
+            <p className="mt-1 text-sm md:text-[1.4vw] text-black">
               <a href="mailto:support@calderco.us" className="hover:text-black">
                 support@calderco.us
               </a>
@@ -44,8 +50,10 @@ export default function ContactInfo() {
 
           {/* Hotline */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-500">Hotline</h3>
-            <p className="mt-1 text-sm">
+            <h3 className="text-md md:text-[1.2vw] font-semibold text-gray-500">
+              Hotline
+            </h3>
+            <p className="mt-1 text-sm md:text-[1.4vw] text-black">
               <a href="tel:+14155550199" className="hover:text-black">
                 +1 (415) 555-0199
               </a>
